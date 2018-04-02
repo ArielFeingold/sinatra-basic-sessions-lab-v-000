@@ -7,6 +7,7 @@ class App < Sinatra::Base
   end
 
   post '/checkout' do
-    binding.pry
+    @cart = params
+    <%= @params[:item] %>
   end
 end

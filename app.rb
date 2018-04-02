@@ -8,6 +8,7 @@ class App < Sinatra::Base
 
   post '/checkout' do
     @cart = params
-    <%= @params[:item] %>
+    "Item = <%= @cart[:name] %>"
+    erb 
   end
 end

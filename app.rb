@@ -7,12 +7,15 @@ class App < Sinatra::Base
 
     set :sessions_secret, "secret"
   end
+
   get '/' do
     erb :index
   end
 
   post '/checkout' do
     @cart = params
+    @session = session
+    binding.pry
     "Item = <%= @cart[:name] %>"
 
   end

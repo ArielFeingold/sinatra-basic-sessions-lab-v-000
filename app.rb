@@ -15,7 +15,7 @@ class App < Sinatra::Base
   post '/checkout' do
     @cart = params
     @session = session
-    binding.pry
+
     "Item = <%= @cart[:name] %>"
 
   end
